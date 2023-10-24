@@ -94,6 +94,24 @@
 |visibilityToggle|是否显示切换密码可见状态的按钮|boolean |`-`|
 |onVisibilityChange|visibility 改变时触发|(visibility: boolean) => void |`-`|
 
+### Input.VerificationCode
+
+`2.55.0` 支持
+
+|参数名|描述|类型|默认值|
+|---|---|---|---|
+|length|验证码的长度，根据长度渲染对应个数的输入框|number |`6`|
+|mode|密码模式或者文本模式输入。|'password' \| 'text' |`-`|
+|size|尺寸|[InputProps](input#input)['size'] |`-`|
+|status|状态|'error' |`-`|
+|className|节点类名|string \| string[] |`-`|
+|defaultValue|默认值|string[] |`-`|
+|style|节点样式|CSSProperties |`-`|
+|value|验证码输入框的值，受控模式|string[] |`-`|
+|onChange|输入值改变时触发的回调|(value: string[]) => void |`-`|
+|onFinish|输入框都被填充后触发的回调|(value: string) => void |`-`|
+|separator|分隔符。可在不同索引的输入框后自定义渲染分隔符|(data: { index: number; character: string }) => ReactNode |`-`|
+
 ## 方法
 
 | 参数名 |     描述     |    类型    | 默认值 |

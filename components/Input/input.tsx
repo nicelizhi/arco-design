@@ -18,6 +18,7 @@ import InputComponent from './input-element';
 import Group from './group';
 import { contains } from '../_util/dom';
 import useMergeProps, { MergePropsOptions } from '../_util/hooks/useMergeProps';
+import VerificationCode from './verification-code';
 
 const keepFocus = (e) => {
   e.target.tagName !== 'INPUT' && e.preventDefault();
@@ -224,6 +225,7 @@ type InputRefType = ForwardRefExoticComponent<
   TextArea: typeof TextArea;
   Password: typeof Password;
   Group: typeof Group;
+  VerificationCode: typeof VerificationCode;
 };
 
 const InputElement = React.forwardRef(Input) as InputRefType;
@@ -237,6 +239,8 @@ InputElement.TextArea = TextArea;
 InputElement.Password = Password;
 
 InputElement.Group = Group;
+
+InputElement.VerificationCode = VerificationCode;
 
 export type InputRef = InputRefType;
 

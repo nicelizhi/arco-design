@@ -386,6 +386,34 @@
   }
 }
 
+@verification-code-prefix-cls: ~'@{prefix}-verification-code';
+
+.@{verification-code-prefix-cls} {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .@{input-prefix-cls} {
+    width: @input-size-default-height;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .@{input-prefix-cls}-size-small {
+    width: @input-size-small-height;
+  }
+
+  .@{input-prefix-cls}-size-mini {
+    width: @input-size-mini-height;
+  }
+
+  .@{input-prefix-cls}-size-large {
+    width: @input-size-large-height;
+  }
+}
+
 @import './size.less';
 @import './textarea.less';
 @import './search.less';

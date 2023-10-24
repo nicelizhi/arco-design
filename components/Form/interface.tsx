@@ -532,9 +532,7 @@ export type FormInstance<
   | 'getFieldsState'
 > & {
   scrollToField: (field: FieldKey, options?: ScrollIntoViewOptions) => void;
-  /**
-   * arco 内部使用，业务万不可调用
-   */
+  // arco 内部使用，业务万不可调用
   getInnerMethods: (inner?: boolean) => InnerMethodsReturnType<FormData, FieldValue, FieldKey>;
 };
 
@@ -646,7 +644,6 @@ export type FieldState<FieldValue = any> = {
   isSubmitting: boolean;
   isTouched: boolean;
 };
-
 
 export enum SubmitStatus {
   init = 'init',
